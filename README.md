@@ -139,8 +139,10 @@ MINIMAX_API_KEY="YOUR_MINIMAX_API_KEY"
 MiniMax offers the following models (204K token context window):
 | Model | Description |
 |-------|-------------|
-| `MiniMax-M2.5` | Default — peak performance, ultimate value |
-| `MiniMax-M2.5-highspeed` | Same performance, faster and more agile |
+| `MiniMax-M2.7` | Default — latest flagship with enhanced reasoning and coding |
+| `MiniMax-M2.7-highspeed` | High-speed version of M2.7 for low-latency scenarios |
+| `MiniMax-M2.5` | Previous generation — peak performance, ultimate value |
+| `MiniMax-M2.5-highspeed` | Previous generation — faster and more agile |
 
 The system will automatically use MiniMax models through its OpenAI-compatible API when `LLM_PROVIDER` is set to `"minimax"`. You can optionally override the base URL with `MINIMAX_API_BASE_URL` (defaults to `https://api.minimax.io/v1`; use `https://api.minimaxi.com/v1` for the China mainland endpoint).
 

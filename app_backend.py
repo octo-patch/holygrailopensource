@@ -108,8 +108,8 @@ class Config:
     MINIMAX_API_KEY = os.getenv("MINIMAX_API_KEY", "")
     MINIMAX_API_BASE_URL = os.getenv("MINIMAX_API_BASE_URL", "https://api.minimax.io/v1")
     MINIMAX_MODELS = {
-        "Model 1": "MiniMax-M2.5",           # Default model (204K context)
-        "Model 2": "MiniMax-M2.5-highspeed",  # Faster variant
+        "Model 1": "MiniMax-M2.7",           # Default model — enhanced reasoning and coding
+        "Model 2": "MiniMax-M2.7-highspeed",  # High-speed variant of M2.7
         "Model 3": "MiniMax-M2.5"             # Fallback
     }
 
@@ -3403,7 +3403,7 @@ def call_minimax_api(model_name, prompt_text=None, conversation_history=None, te
     base_delay = 2
     models_to_try = [
         Config.MINIMAX_MODELS.get(model_name, Config.MINIMAX_MODELS[Config.DEFAULT_MODEL]),
-        "MiniMax-M2.5-highspeed",  # Fallback
+        "MiniMax-M2.7-highspeed",  # Fallback
         "MiniMax-M2.5"             # Final fallback
     ]
 
